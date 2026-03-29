@@ -3,149 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Zen | Early Buddhism & AI</title>
-    <!-- Tailwind CSS for modern, responsive design -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Early Buddhism & Transcendental Wellbeing</title>
     <style>
-        body { 
-            font-family: 'Inter', 'Sarabun', sans-serif; 
-            background-color: #0d0d0d; 
-            color: #d4d4d4; 
-            scroll-behavior: smooth;
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --accent-color: #d4af37; /* Gold focus */
+            --secondary-text: #a0a0a0;
         }
-        .content-section { display: none; }
-        .active { display: block; animation: fadeIn 0.6s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .btn-lang { transition: all 0.3s; border: 1px solid #333; }
-        .btn-lang:hover { border-color: #fbbf24; color: #fbbf24; }
-        .active-btn { border-color: #fbbf24; color: #fbbf24; background: rgba(251, 191, 36, 0.1); }
-        .glass-nav {
-            background: rgba(13, 13, 13, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #1f1f1f;
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        h2, h3 { color: #ffffff; }
-        strong { color: #fbbf24; }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid #333;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h1, h2 {
+            color: var(--accent-color);
+            font-weight: 300;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .bilingual-content [lang="en"] {
+            display: none; /* Default to Thai */
+        }
     </style>
 </head>
-<body class="min-h-screen">
+<body>
 
-    <!-- Navigation / Header -->
-    <nav class="fixed top-0 w-full z-50 glass-nav">
-        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-xl font-light tracking-widest text-white uppercase">Digital Zen</span>
-                <span class="text-[10px] text-gray-500 uppercase tracking-tighter">Early Buddhism & AI</span>
-            </div>
-            <div class="flex space-x-2">
-                <button onclick="switchLang('th')" id="btn-th" class="btn-lang active-btn px-4 py-1 text-xs rounded-full">ภาษาไทย</button>
-                <button onclick="switchLang('en')" id="btn-en" class="btn-lang px-4 py-1 text-xs rounded-full">ENGLISH</button>
-            </div>
+    <div class="container">
+        <div class="lang-switcher">
+            <button onclick="switchLang('th')">THA</button>
+            <button onclick="switchLang('en')">ENG</button>
         </div>
-    </nav>
 
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-4xl mx-auto leading-relaxed">
-        
-        <!-- THAI CONTENT SECTION -->
-        <article id="content-th" class="content-section active">
-            <header class="mb-12">
-                <h1 class="text-4xl md:text-5xl font-semibold text-amber-500 mb-4">วิถีศิลปินดิจิทัล: แสงแห่งธรรมในโลกเสมือน</h1>
-                <p class="text-gray-400 italic">คุยกันเล่นๆ แต่ได้สาระ: วิธีทำงานในโลก AI แบบใจเป็นสุข (สร้างกับ เอไอ)</p>
-            </header>
-            
-            <div class="space-y-8 text-lg font-light text-gray-300">
-                <p>ช่วงนี้เราเห็นกันชัดๆ เลยเนอะว่าข้อมูลมันล้นทะลักเหมือนน้ำท่วม แถมยังมี AI เข้ามาช่วยทำงานแทนเราแทบทุกอย่าง โลกดิจิทัลตอนนี้เลยดูเหมือนเขาวงกตที่เต็มไปด้วยสิ่งล่อใจเต็มไปหมด จนบางทีเราก็แอบสงสัยเหมือนกันนะว่า <strong>"เราจะใช้ชีวิตยังไงให้ใจยังนิ่งและมีความสุขได้จริง"</strong> ท่ามกลางเสียงแจ้งเตือนที่ดังไม่หยุดแบบนี้</p>
+        <header>
+            <h1>Early Buddhism in the Digital Millennium</h1>
+            <p style="font-style: italic; color: var(--secondary-text);">
+                "Right Livelihood & The Bliss of Renunciation"
+            </p>
+        </header>
 
+        <main class="bilingual-content">
+            <div id="content-th" lang="th">
                 <section>
-                    <h2 class="text-2xl font-semibold mb-4 border-l-4 border-amber-500 pl-4">๑. มองภาพใหญ่: สังคมที่ช่วยกันคิด ช่วยกันทำ</h2>
-                    <p class="mb-4">ถ้าลองมองในภาพรวม การทำงานเลี้ยงชีพในยุคนี้ไม่ได้หมายถึงการก้มหน้าก้มตาปั่นงานแข่งกับใครเพื่อความรวยอย่างเดียวแล้วล่ะครับ แต่มันคือการที่เรามองหาทางใช้เทคโนโลยีมาเป็น <strong>"ผู้ช่วย"</strong> เพื่อให้เรามีชีวิตที่เบาสบายขึ้นจริงๆ</p>
-                    <ul class="list-disc list-inside space-y-4 ml-4">
-                        <li><strong>เปลี่ยนจากการปั่นงาน มาเป็นการแบ่งปัน:</strong> ในเมื่อ AI ช่วยเราทำงานยากๆ ได้แล้ว แทนที่จะเอาเวลานั้นไปหาเงินเพิ่มอย่างเดียว ลองเอาเวลาที่เหลือมาดูแลใจตัวเอง หรือออกไปช่วยคนอื่นดูบ้างดีไหม?</li>
-                        <li><strong>ระบบที่ออกแบบมาให้ใจสงบ:</strong> เราควรช่วยกันสร้างพื้นที่ดิจิทัลที่ไม่จ้องจะดึงเวลาเราไปอย่างเดียว ระบบดีๆ ควรจะช่วยให้เราเห็นความจริงและมีสติมากขึ้นครับ</li>
-                    </ul>
+                    <h2>สัมมาอาชีวะในยุค AI (Right Livelihood)</h2>
+                    <p>การทำงานในยุคปัญญาประดิษฐ์ไม่ใช่แค่เรื่องของประสิทธิภาพ แต่คือการรักษา "สติ" และ "เมตตา" ในเนื้องาน เราใช้เครื่องมือที่ล้ำสมัยเพื่อเกื้อกูลเพื่อนมนุษย์ โดยไม่ละทิ้งหลักการไม่เบียดเบียน</p>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-semibold mb-4 border-l-4 border-amber-500 pl-4">๒. เรื่องใกล้ตัว: จัดบ้านใจในหน้าจอคอม</h2>
-                    <p class="mb-4">การทำงานแบบ "ศิลปินดิจิทัลที่มีสติ" คือการใช้ชีวิตแบบเท่ๆ ท่ามกลางกระแสข้อมูลที่ไหลมาไวมากครับ</p>
-                    <ul class="list-disc list-inside space-y-4 ml-4">
-                        <li><strong>ทำงานเหมือนฝึกสติ:</strong> ทุกครั้งที่นั่งหน้าคอม ลองฝึกให้เป็นการ "ทำสมาธิ" ไปในตัวดูครับ ให้นิ้วที่กดคีย์บอร์ดเตือนเราว่า "ตอนนี้เรากำลังทำอะไรอยู่"</li>
-                        <li><strong>พักหน้าจอบ้างก็ได้:</strong> การมีเวลาส่วนตัวที่ <strong>"AI เข้าไม่ถึง"</strong> นี่แหละคือเกราะป้องกันความเครียดชั้นดีเลยล่ะครับ</li>
-                    </ul>
+                    <h2>เนกขัมมสุข: ความสุขจากการสละออก</h2>
+                    <p>ในโลกที่เต็มไปด้วย Notification และการบริโภคข้อมูลล้นเกิน ความสุขที่แท้จริงกลับอยู่ที่การ "ละ" มากกว่าการ "สะสม" เนกขัมมสุขคืออิสระจากความทะยานอยากในโลกดิจิทัล</p>
                 </section>
-
-                <section>
-                    <h2 class="text-2xl font-semibold mb-4 border-l-4 border-amber-500 pl-4">๓. ความสุขแบบไม่ต้องง้อไลก์</h2>
-                    <p>ความสุขที่แท้จริงในยุคดิจิทัลคือการที่เราสามารถนั่งอยู่เฉยๆ กับตัวเองได้โดยไม่ต้องหยิบมือถือขึ้นมาไถครับ เมื่อเราทำงานด้วยใจที่อยาก <strong>"ให้"</strong> มากกว่าอยาก <strong>"เอา"</strong> ใจเราจะเบาและเย็นลงมากเลยล่ะ</p>
-                </section>
-
-                <div class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 mt-12 italic text-center">
-                    "ใช้ AI ให้เหมือนเราเป็นเจ้านายมัน อย่าให้มันจูงจมูกเรา <br> ตั้งใจทำงานให้เต็มที่ แต่ก็อย่าลืมทำใจให้ว่างและสงบด้วยนะ!"
-                </div>
             </div>
-        </article>
 
-        <!-- ENGLISH CONTENT SECTION -->
-        <article id="content-en" class="content-section">
-            <header class="mb-12">
-                <h1 class="text-4xl md:text-5xl font-semibold text-amber-500 mb-4">Staying Chill in the AI Era</h1>
-                <p class="text-gray-400 italic">Zen & AI: The Ultimate Chill Guide (Created with AI)</p>
-            </header>
-            
-            <div class="space-y-8 text-lg font-light text-gray-300">
-                <p>Yo, real talk—the internet’s basically a giant noise machine rn, lol. Between doomscrolling and AI blowing up everywhere, our brains are kinda fried, fr. So, how do we keep our vibe right without losing our souls? The answer’s actually old school—like, <strong>Early Buddhism old</strong>—but tweaked for us "Digital Artisans." No cap.</p>
-
+            <div id="content-en" lang="en">
                 <section>
-                    <h2 class="text-2xl font-semibold mb-4 border-l-4 border-amber-500 pl-4">I. The Big Picture: Vibe Check</h2>
-                    <p class="mb-4">On a macro level, "Right Livelihood" (<em>Samma-ajiva</em>) needs to stop being about that toxic grind culture. Now that AI is gonna handle all the boring work, we’ve got a massive chance to change the game. W!</p>
-                    <ul class="list-disc list-inside space-y-4 ml-4">
-                        <li><strong>Ditch the Grind, Find the Flow:</strong> Working "right" isn't about how much you do, it's about <strong>the vibes you bring</strong>. Tech should give us the free time to actually connect and find some inner peace. Ong.</li>
-                        <li><strong>Apps that Don't Suck:</strong> We need tech that actually helps us flourish, not just keeps us addicted. Our work is only "legit" if it’s making the world less of a headache.</li>
-                    </ul>
+                    <h2>Right Livelihood in the Age of AI</h2>
+                    <p>Working with Artificial Intelligence is not just about efficiency, but about maintaining "Sati" (Mindfulness) and "Metta" (Loving-kindness). We utilize advanced tools to serve humanity without compromising non-harming principles.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-semibold mb-4 border-l-4 border-amber-500 pl-4">II. For You: Tech-Savvy Monk Vibe</h2>
-                    <p class="mb-4">Getting to that "Zen Mode" (*Nekkhamma-sukha*) starts with taking back your own brain. Total digital solitude vibes, even when you're 5G connected.</p>
-                    <ul class="list-disc list-inside space-y-4 ml-4">
-                        <li><strong>Work is a Service, Bro:</strong> Use AI like a smart intern to do the meh stuff, so you can dive into "Deep Work." It’s legit active meditation.</li>
-                        <li><strong>Ghost the Ego:</strong> Once you realize your digital profile isn't actually <strong>YOU</strong> (*Anatta*), you stop stressing the clout. Just let it go, man.</li>
-                    </ul>
+                    <h2>Nekkhamma-sukha: The Bliss of Renunciation</h2>
+                    <p>In a world of constant notifications and information overload, true happiness is found in "letting go" rather than "accumulating." Renunciation in the digital age is the freedom from sensory craving.</p>
                 </section>
-
-                <div class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 mt-12 italic text-center">
-                    "Let your work be your Zen, use your tools like a boss, <br> and keep your vibe real. Stay chill!"
-                </div>
             </div>
-        </article>
-
-    </main>
-
-    <footer class="pb-12 px-6 text-center">
-        <div class="max-w-4xl mx-auto pt-8 border-t border-zinc-800">
-            <p class="text-xs text-zinc-600 tracking-widest uppercase mb-2">© 2026 Digital Artisan Project</p>
-            <p class="text-[10px] text-zinc-700">Built with Sati, Code, and Artificial Intelligence</p>
-        </div>
-    </footer>
+        </main>
+    </div>
 
     <script>
         function switchLang(lang) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
-            // Reset buttons
-            document.querySelectorAll('.btn-lang').forEach(b => b.classList.remove('active-btn'));
-            
-            // Show selected section
-            document.getElementById('content-' + lang).classList.add('active');
-            // Highlight selected button
-            document.getElementById('btn-' + lang).classList.add('active-btn');
-            
-            // Update HTML lang attribute
-            document.documentElement.lang = lang === 'th' ? 'th' : 'en';
-
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (lang === 'th') {
+                document.getElementById('content-th').style.display = 'block';
+                document.getElementById('content-en').style.display = 'none';
+            } else {
+                document.getElementById('content-th').style.display = 'none';
+                document.getElementById('content-en').style.display = 'block';
+            }
         }
     </script>
 </body>
